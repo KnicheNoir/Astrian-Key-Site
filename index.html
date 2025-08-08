@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Open+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
   <style>
     body {
-      /* Corrected main background image to the one you liked */
-      background: #222 url('bkgrnd (2).jpg') no-repeat center center fixed;
+      /* This is your main background image */
+      background: #222 url('4grnd (13).jpg') no-repeat center center fixed;
       background-size: cover;
       color: #e0cda7;
       font-family: 'Open Sans', Lato, Arial, sans-serif;
@@ -16,6 +16,7 @@
       min-height: 100vh;
     }
     header {
+      /* Background is now transparent */
       background: transparent;
       padding: 2em 1em 1em 1em;
       text-align: center;
@@ -37,31 +38,26 @@
       font-size: 2.2em;
       color: #bfa14e;
       margin-bottom: 0.2em;
-      text-shadow: 2px 2px 4px #000;
-    }
-    h2, h3 {
-      font-family: 'Cinzel Decorative', serif;
-      color: #bfa14e;
-      text-shadow: 1px 1px 2px #000;
     }
     nav {
       margin: 2em auto;
       max-width: 700px;
+      /* Background is now transparent */
       background: transparent;
       border-radius: 12px;
       padding: 2em;
       box-shadow: 0 0 24px #bfa14e22;
-      backdrop-filter: none; /* Removed blur here */
+      backdrop-filter: blur(8px);
     }
     .glass-tile {
+      /* Background is now transparent */
       background: transparent;
       border-radius: 12px;
       box-shadow: 0 0 18px #bfa14e44;
-      backdrop-filter: none; /* Removed blur here */
+      backdrop-filter: blur(8px);
       border: 1.5px solid #bfa14e77;
       padding: 1.5em;
       margin: 1em 0;
-      text-align: center; /* Center the content inside the tile */
     }
     ul { list-style: none; padding: 0; margin: 0;}
     li { margin: 1em 0; }
@@ -70,6 +66,7 @@
       font-family: 'Cinzel Decorative', serif;
       font-size: 1.35em;
       color: #bfa14e;
+      /* Background is now transparent */
       background: transparent;
       padding: 0.4em 1.2em;
       border-radius: 6px;
@@ -84,13 +81,19 @@
       text-align: center;
       margin-top: 2em;
     }
-    /* Styles for the new single-image approach */
-    .full-image-display {
-      width: 100%;
+    .globe-img {
+      width: 60%;
       max-width: 500px;
-      margin: 0 auto;
-      display: block;
       z-index: 2;
+    }
+    .hands-img {
+      position: absolute;
+      left: 50%;
+      bottom: -40px;
+      transform: translateX(-50%);
+      width: 60%;
+      max-width: 500px;
+      z-index: 1;
     }
     .caduceus-compass {
       height: 3em;
@@ -108,17 +111,18 @@
 </head>
 <body>
   <header>
-    <img src="4ground.png" class="visage" alt="Visage">
+    <img src="your-visage-image.jpg" class="visage" alt="Visage">
     <h1>Astrian Key</h1>
     <div style="color:#d6baff;">Explore the sequence: Aleph to Zayin</div>
   </header>
   <main>
     <div class="globe-container">
-      <img src="4grnd (10).jpg" class="full-image-display" alt="Wireframe Globe"/>
+      <img src="your-globe-image.jpg" class="globe-img" alt="Wireframe Globe"/>
+      <img src="your-hands-image.jpg" class="hands-img" alt="Hands"/>
     </div>
     <div class="glass-tile">
       <a href="#" id="legend-toggle" class="legend-toggle">
-        <img src="caduceus-compass.svg" class="caduceus-compass" alt="Compass"/>
+        <img src="your-caduceus-compass.svg" class="caduceus-compass" alt="Compass"/>
         Astrian Legend
       </a>
     </div>
@@ -133,10 +137,11 @@
         <li><a href="zayin.html"><span class="glyph">&#x05D6;</span> Zayin</a></li>
         <li><a href="cheth.html"><span class="glyph">&#x05D7;</span> Cheth</a></li>
       </ul>
+      </ul>
     </nav>
   </main>
   <footer>
     &copy; 2025 Astrian Key. All rights reserved.
   </footer>
 </body>
-</html>
+  </html>
