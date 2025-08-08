@@ -6,77 +6,110 @@
     <meta name="description" content="Discover The Astrian Key™, where ancient wisdom meets modern technology in a practical manual for self mastery. Welcome to your journey of discovery.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            background: #222 url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-            background-size: cover;
-            color: #e0cda7;
-            font-family: 'Open Sans', Lato, Arial, sans-serif;
-            margin: 0;
-            min-height: 100vh;
-        }
-        header {
-            background: rgba(34, 34, 34, 0.85);
-            padding: 2em 1em;
-            text-align: center;
-            border-bottom: 2px solid #bfa14e;
-        }
-        h1 {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 2.5em;
-            color: #bfa14e;
-            margin-bottom: 0.2em;
-            text-shadow: 0 0 10px #bfa14e77;
-        }
-        .tagline {
-            font-size: 1.3em;
-            font-style: italic;
-            color: #d6baff;
-            margin-bottom: 1em;
-        }
-        section {
-            margin: 2em auto;
-            max-width: 800px;
-            background: rgba(44, 44, 44, 0.92);
-            border-radius: 12px;
-            padding: 2em;
-            box-shadow: 0 0 30px #bfa14e22;
-        }
-        .features {
-            margin: 1.5em 0;
-        }
-        .features ul {
-            list-style-type: square;
-            padding-left: 1.5em;
-        }
-        .cta {
-            display: block;
-            margin: 2em auto 0 auto;
-            padding: 0.8em 2em;
-            font-size: 1.2em;
-            background: linear-gradient(90deg, #bfa14e 50%, #d6baff 100%);
-            color: #222;
-            font-weight: bold;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            box-shadow: 0 0 10px #bfa14e77;
-            transition: background 0.2s;
-        }
-        .cta:hover {
-            background: linear-gradient(90deg, #d6baff 50%, #bfa14e 100%);
-        }
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            color: #bbb;
-            font-size: 0.9em;
-        }
-        .glyph {
-            font-size: 1.7em;
-            vertical-align: middle;
-            color: #bfa14e;
-        }
-    </style>
+  body {
+    background: #222 url('bkgrnd.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0cda7;
+    font-family: 'Open Sans', Lato, Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+  }
+  header {
+    /* No background, no blur */
+    background: transparent;
+    padding: 2em 1em 1em 1em;
+    text-align: center;
+    border-bottom: 2px solid #bfa14e;
+    position: relative;
+  }
+  .visage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    z-index: 2;
+  }
+  h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.2em;
+    color: #bfa14e;
+    margin-bottom: 0.2em;
+    /* Adding text shadow for contrast */
+    text-shadow: 2px 2px 4px #000;
+  }
+  h2, h3 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #bfa14e;
+    /* Adding text shadow for contrast */
+    text-shadow: 1px 1px 2px #000;
+  }
+  nav, .content-section, .glass-tile {
+    /* No background, no blur */
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 700px;
+  }
+  .glass-tile {
+    border: 1.5px solid #bfa14e77;
+    box-shadow: 0 0 18px #bfa14e44;
+  }
+  ul { list-style: none; padding: 0; margin: 0;}
+  li { margin: 1em 0; }
+  a {
+    display: inline-block;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.35em;
+    color: #bfa14e;
+    /* No background */
+    background: transparent;
+    padding: 0.4em 1.2em;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 8px #bfa14e44;
+    transition: background 0.2s;
+  }
+  a:hover { background: #bfa14e; color: #222;}
+  .glyph { font-size: 1.7em; vertical-align: middle; color: #bfa14e;}
+  .globe-container {
+    position: relative;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .globe-img {
+    width: 60%;
+    max-width: 500px;
+    z-index: 2;
+  }
+  .hands-img {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 500px;
+    z-index: 1;
+  }
+  .caduceus-compass {
+    height: 3em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+  .legend-toggle {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.2em;
+    color: #bfa14e;
+    cursor: pointer;
+  }
+  footer { text-align: center; padding: 1em 0; color: #bbb; font-size: 0.9em;}
+</style>
+
     <!-- Google Fonts for Cinzel Decorative -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Open+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
 </head>
