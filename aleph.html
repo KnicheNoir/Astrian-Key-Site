@@ -7,12 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
   body {
-    background: #222 url('4grnd (13).jpg') no-repeat center center fixed;
+    position: relative;
+    background: #222 url('4grnd (15).png') no-repeat center center fixed;
     background-size: cover;
-    color: #E6E6FA; /* Lavender for body text */
+    color: #F5F5DC; /* Soft Cream for body text */
     font-family: 'Open Sans', Lato, Arial, sans-serif;
     margin: 0;
     min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker to dim the background */
+    z-index: -1;
   }
   header {
     background: transparent;
@@ -21,31 +32,41 @@
     border-bottom: 2px solid #bfa14e;
     position: relative;
   }
-  h1, h2, h3 {
+  h1 {
     font-family: 'Cinzel Decorative', serif;
-    color: #9966CC; /* Amethyst for headings */
-    text-shadow: 2px 2px 4px #000;
+    font-size: 2.2em;
+    color: #FFD700; /* Gold for main headings */
+    margin-bottom: 0.2em;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.4); /* Added a glow effect */
   }
-  nav, .content-section, .glass-tile {
-    background: transparent;
-    backdrop-filter: none;
-    box-shadow: none;
-    border: none;
+  h2, h3 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #B56F3F; /* Deep Bronze for subheadings */
+    text-shadow: 1px 1px 2px #000;
+  }
+  .content-section, .glass-tile {
+    /* Semi-transparent gray "label" background */
+    background: rgba(44, 44, 44, 0.7); /* Chosen gray with medium transparency */
+    border-radius: 12px;
     padding: 2em;
     margin: 2em auto;
     max-width: 700px;
-  }
-  .glass-tile {
+    box-shadow: 0 0 24px #bfa14e22; /* Retaining the border glow effect */
     border: 1.5px solid #bfa14e77;
-    box-shadow: 0 0 18px #bfa14e44;
+    backdrop-filter: none;
   }
   ul { list-style: none; padding: 0; margin: 0;}
   li { margin: 1em 0; }
+  p, li {
+    font-size: 18px;
+    font-weight: bold; /* Bold font for readability */
+    text-shadow: 1px 1px 2px #000;
+  }
   a {
     display: inline-block;
     font-family: 'Cinzel Decorative', serif;
     font-size: 1.35em;
-    color: #4B0082; /* Indigo for links */
+    color: #FFD700; /* Gold for links */
     background: transparent;
     padding: 0.4em 1.2em;
     border-radius: 6px;
@@ -54,14 +75,10 @@
     transition: background 0.2s;
   }
   a:hover { background: #bfa14e; color: #222;}
-  .glyph { font-size: 1.7em; vertical-align: middle; color: #9966CC;}
+  .glyph { font-size: 1.7em; vertical-align: middle; color: #FFD700;}
   .caduceus-compass { height: 3em; vertical-align: middle; margin-right: 0.5em;}
   footer { text-align: center; padding: 1em 0; color: #bbb; font-size: 0.9em;}
 </style>
-
-
-
-    <!-- Google Fonts for Cinzel Decorative -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Open+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -69,7 +86,7 @@
         <h1>Aleph (א): The Astrian Key™</h1>
         <div class="tagline">What if life came with a user manual? Would you like a copy of yours?</div>
     </header>
-    <section>
+    <section class="content-section">
         <h2>Welcome, Keepers of the Last Word</h2>
         <p>
             Welcome to <strong>The Astrian Key™</strong>—an instrument designed to answer the most profound question: <em>“Why?”</em> This isn’t just another app; it’s a practical oracle for the modern age, a user manual for the operating system of existence itself.
