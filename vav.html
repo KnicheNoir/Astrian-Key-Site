@@ -5,69 +5,58 @@
     <title>Vav (ו): Demo – Try The Astrian Key™</title>
     <meta name="description" content="Experience a demo of The Astrian Key™. Explore a sample reading and see how the app reveals patterns and guidance using ancient wisdom and modern logic.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Open+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
     <style>
   body {
-    background: #222 url('4grnd (10).jpg') no-repeat center center fixed;
+    position: relative;
+    background: #222 url('4grnd (15).jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #e0cda7;
+    color: #F5F5DC;
     font-family: 'Open Sans', Lato, Arial, sans-serif;
     margin: 0;
     min-height: 100vh;
   }
   header {
-    /* No background, no blur */
     background: transparent;
     padding: 2em 1em 1em 1em;
     text-align: center;
     border-bottom: 2px solid #bfa14e;
     position: relative;
   }
-  .visage {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    z-index: 2;
-  }
   h1 {
     font-family: 'Cinzel Decorative', serif;
     font-size: 2.2em;
-    color: #bfa14e;
+    color: #FFD700;
     margin-bottom: 0.2em;
-    /* Adding text shadow for contrast */
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px rgba(255, 215, 0, 0.4);
   }
   h2, h3 {
     font-family: 'Cinzel Decorative', serif;
-    color: #bfa14e;
-    /* Adding text shadow for contrast */
+    color: #B56F3F; /* Deep Bronze for subheadings */
     text-shadow: 1px 1px 2px #000;
   }
-  nav, .content-section, .glass-tile {
-    /* No background, no blur */
-    background: transparent;
-    backdrop-filter: none;
-    box-shadow: none;
-    border: none;
+  .content-section, .demo-section, .glass-tile {
+    background: rgba(44, 44, 44, 0.7);
+    border-radius: 12px;
     padding: 2em;
     margin: 2em auto;
     max-width: 700px;
-  }
-  .glass-tile {
+    box-shadow: 0 0 24px #bfa14e22;
     border: 1.5px solid #bfa14e77;
-    box-shadow: 0 0 18px #bfa14e44;
+    backdrop-filter: none;
   }
   ul { list-style: none; padding: 0; margin: 0;}
   li { margin: 1em 0; }
+  p, li {
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+  }
   a {
     display: inline-block;
     font-family: 'Cinzel Decorative', serif;
     font-size: 1.35em;
-    color: #bfa14e;
-    /* No background */
+    color: #FFD700;
     background: transparent;
     padding: 0.4em 1.2em;
     border-radius: 6px;
@@ -76,41 +65,10 @@
     transition: background 0.2s;
   }
   a:hover { background: #bfa14e; color: #222;}
-  .glyph { font-size: 1.7em; vertical-align: middle; color: #bfa14e;}
-  .globe-container {
-    position: relative;
-    text-align: center;
-    margin-top: 2em;
-  }
-  .globe-img {
-    width: 60%;
-    max-width: 500px;
-    z-index: 2;
-  }
-  .hands-img {
-    position: absolute;
-    left: 50%;
-    bottom: -40px;
-    transform: translateX(-50%);
-    width: 60%;
-    max-width: 500px;
-    z-index: 1;
-  }
-  .caduceus-compass {
-    height: 3em;
-    vertical-align: middle;
-    margin-right: 0.5em;
-  }
-  .legend-toggle {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.2em;
-    color: #bfa14e;
-    cursor: pointer;
-  }
+  .glyph { font-size: 1.7em; vertical-align: middle; color: #FFD700;}
   footer { text-align: center; padding: 1em 0; color: #bbb; font-size: 0.9em;}
 </style>
 
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700|Open+Sans:400,700|Lato:400,700&display=swap" rel="stylesheet">
     <script>
         function runDemo() {
             const input = document.getElementById('demoInput').value.trim();
